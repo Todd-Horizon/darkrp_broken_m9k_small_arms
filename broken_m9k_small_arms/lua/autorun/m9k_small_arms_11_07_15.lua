@@ -1,9 +1,28 @@
+/*------------------------------------------------------
+
+If you're reading this, then that mean's you've extracted this addon, probably with intentions 
+of editing it for your own needs, or that you're using a legacy addon.
+
+I have no problem with that, but you must understand that I cannot offer support for legacy addons.
+If you've extracted this addon, I cannot offer any help fixing problems that come up. It's impossible
+to know what you've changed, and thus impossible to know what to fix.
+
+"But Bob!" you might say. "I only changed one thing!" 
+
+Well, that's a shame. Everybody is going to say this, and I know that some of those people will be
+lying to me. The only thing I can do is to refuse support to everyone using legacy addons.
+
+So, by using a legacy addon, you accept the fact that I cannot help fix anything that might be broken.
+
+I know it's tough love, but that's the way it's got to be.
+
+------------------------------------------------------*/
 local icol = Color( 255, 255, 255, 255 ) 
 if CLIENT then
-	killicon.Add( "m9k_colt1911", "vgui/hud/m9k_colt1911_broken", icol  )
 	killicon.Add( "m9k_coltpython_broken", "vgui/hud/m9k_coltpython_broken", icol  )
 	killicon.Add( "m9k_deagle_broken", "vgui/hud/m9k_deagle_broken", icol  )
 	killicon.Add( "m9k_glock_broken", "vgui/hud/m9k_glock_broken", icol  )
+	killicon.Add( "m9k_ragingbull_broken", "vgui/hud/m9k_ragingbull_broken", icol  )
 	killicon.Add( "m9k_vector_broken", "vgui/hud/m9k_vector_broken", icol  )
 	
 
@@ -233,40 +252,26 @@ sound.Add({
 	sound = 			"weapons/dmg_glock/mac10_deploy.mp3" 
 })
 
-//colt 1911
+//Raging Bull
 sound.Add({
-	name = 			"Dmgfok_co1911.Single",
+	name = 			"weapon_r_bull.Single",
 	channel = 		CHAN_USER_BASE+10,
 	volume = 		1.0,
-	sound = 			"weapons/dmg_colt1911/deagle-1.wav"
+	sound = 			"weapons/r_bull/r-bull-1.wav"
 })
 
 sound.Add({
-	name = 			"Dmgfok_co1911.Clipout",
+	name = 			"weapons_r_bull_bullreload_wav",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/dmg_colt1911/draw.mp3"
+	sound = 			"weapons/r_bull/bullreload.mp3"
 })
 
 sound.Add({
-	name = 			"Dmgfok_co1911.Clipin",
+	name = 			"weapons_r_bull_draw_gun_wav",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/dmg_colt1911/de_clipin.mp3"
-})
-
-sound.Add({
-	name = 			"Dmgfok_co1911.Slideback",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/dmg_colt1911/de_slideback.mp3"
-})
-
-sound.Add({
-	name = 			"Dmgfok_co1911.Draw",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/dmg_colt1911/draw.mp3"
+	sound = 			"weapons/r_bull/draw_gun.mp3"
 })
 
 //desert eagle

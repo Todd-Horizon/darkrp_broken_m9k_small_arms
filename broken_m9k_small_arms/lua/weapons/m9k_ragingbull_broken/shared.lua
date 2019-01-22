@@ -1,5 +1,5 @@
 -- Variables that are used on both client and server
-SWEP.Gun = ("m9k_coltpython_broken") -- must be the name of your swep but NO CAPITALS!
+SWEP.Gun = ("m9k_ragingbull_broken") -- must be the name of your swep but NO CAPITALS!
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "bobs_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
@@ -10,9 +10,9 @@ SWEP.Purpose				= "To break M9K"
 SWEP.Instructions				= "Hold Mouse 1"
 SWEP.MuzzleAttachment			= "1" 	-- Should be "1" for CSS models or "muzzle" for hl2 models
 SWEP.ShellEjectAttachment			= "2" 	-- Should be "2" for CSS models or "1" for hl2 models
-SWEP.PrintName				= "Broken Colt Python"		-- Weapon name (Shown on HUD)	
+SWEP.PrintName				= "Broken Raging Bull"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 1				-- Slot in the weapon selection menu
-SWEP.SlotPos				= 57			-- Position in the slot
+SWEP.SlotPos				= 30			-- Position in the slot
 SWEP.DrawAmmo				= true		-- Should draw the default HL2 ammo counter
 SWEP.DrawWeaponInfoBox			= false		-- Should draw the weapon info box
 SWEP.BounceWeaponIcon   		= 	false	-- Should the weapon icon bounce?
@@ -25,18 +25,18 @@ SWEP.HoldType 				= "revolver"		-- how others view you carrying the weapon
 -- you're mostly going to use ar2, smg, shotgun or pistol. rpg and crossbow make for good sniper rifles
 
 SWEP.ViewModelFOV			= 65
-SWEP.ViewModelFlip			= false
-SWEP.ViewModel				= "models/weapons/v_pist_python.mdl"	-- Weapon view model
-SWEP.WorldModel				= "models/weapons/w_colt_python.mdl"	-- Weapon world model
+SWEP.ViewModelFlip			= true
+SWEP.ViewModel				= "models/weapons/v_raging_bull.mdl"	-- Weapon view model
+SWEP.WorldModel				= "models/weapons/w_taurus_raging_bull.mdl"	-- Weapon world model
 SWEP.Base				= "bobs_gun_base"
 SWEP.Spawnable				= true
 SWEP.AdminSpawnable			= true
-SWEP.FiresUnderwater = true
+SWEP.FiresUnderwater = false
 
-SWEP.Primary.Sound			= Sound("Weapon_ColtPython.Single")		-- Script that calls the primary fire sound
-SWEP.Primary.RPM			= 2000			-- This is in Rounds Per Minute
-SWEP.Primary.ClipSize			= 200		-- Size of a clip
-SWEP.Primary.DefaultClip		= 2000		-- Bullets you start with
+SWEP.Primary.Sound			= Sound("weapon_r_bull.single")		-- Script that calls the primary fire sound
+SWEP.Primary.RPM			= 90000			-- This is in Rounds Per Minute
+SWEP.Primary.ClipSize			= 3566		-- Size of a clip
+SWEP.Primary.DefaultClip		= 2678		-- Bullets you start with
 SWEP.Primary.KickUp				= 0		-- Maximum up recoil (rise)
 SWEP.Primary.KickDown			= 0		-- Maximum down recoil (skeet)
 SWEP.Primary.KickHorizontal		= 0		-- Maximum up recoil (stock)
@@ -49,18 +49,18 @@ SWEP.Secondary.IronFOV			= 65		-- How much you 'zoom' in. Less is more!
 SWEP.data 				= {}				--The starting firemode
 SWEP.data.ironsights			= 1
 
-SWEP.Primary.NumShots	= 1		--how many bullets to shoot, use with shotguns
-SWEP.Primary.Damage		= 500	--base damage, scaled by game
-SWEP.Primary.Spread		= .0001	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
-SWEP.Primary.IronAccuracy = .0001 -- has to be the same as primary.spread
+SWEP.Primary.NumShots	= 5		-- How many bullets to shoot per trigger pull
+SWEP.Primary.Damage		= 90000	-- Base damage per bullet
+SWEP.Primary.Spread		= .0001	-- Define from-the-hip accuracy 1 is terrible, .0001 is exact)
+SWEP.Primary.IronAccuracy = .001 -- Ironsight accuracy, should be the same for shotguns
 
 -- Enter iron sight info and bone mod info below
-SWEP.IronSightsPos = Vector(-2.743, -1.676, 1.796)
-SWEP.IronSightsAng = Vector(0.611, 0.185, 0)
-SWEP.SightsPos = Vector(-2.743, -1.676, 1.796)
-SWEP.SightsAng = Vector(0.611, 0.185, 0)
-SWEP.RunSightsPos = Vector(2.124, -9.365, -3.987)
-SWEP.RunSightsAng = Vector(48.262, -8.214, 0)
+SWEP.IronSightsPos = Vector(2.773, 0, 0.846)
+SWEP.IronSightsAng = Vector(-0.157, 0, 0)
+SWEP.SightsPos = Vector(2.773, 0, 0.846)
+SWEP.SightsAng = Vector(-0.157, 0, 0)
+SWEP.RunSightsPos = Vector(0, 2.95, 0)
+SWEP.RunSightsAng = Vector(-13.197, 5.737, 0)
 
 if GetConVar("M9KDefaultClip") == nil then
 	print("M9KDefaultClip is missing! You may have hit the lua limit!")
